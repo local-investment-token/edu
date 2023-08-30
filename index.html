@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>wmd</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Hello Milady!</h1>
+  <div class="spaghetti">
+    Delicious spaghetti everywhere!
+</div>
+  <p><p id="myOriginalPara">copy pasta🍝</p>
+<button onclick="changeColor()">Click me!</button>
+<script>
+    function changeColor() {
+      document.getElementById("myOriginalPara").style.color = "hotpink";
+    }
+  </script>
+<script>
+    document.addEventListener("click", function(event) {
+        for(let i = 0; i < 10; i++) {
+            let emoji = document.createElement("span");
+            emoji.innerHTML = "🍝";
+            
+            let randomX = Math.floor(Math.random() * 200) - 100; 
+            let randomY = Math.floor(Math.random() * 200) - 100;
+            
+            emoji.style.position = "absolute";
+            emoji.style.left = (event.pageX + randomX) + "px";
+            emoji.style.top = (event.pageY + randomY) + "px";
+            document.body.appendChild(emoji);
+            
+            setTimeout(function() {
+                emoji.remove();
+            }, 1000);
+        }
+    });
+</script>
+
+
+</body>
+</html>

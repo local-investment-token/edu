@@ -1,0 +1,39 @@
+h1 {
+    color: pink;
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+  }
+  .spaghetti {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 24px;
+    border: 5px dashed #a33;
+    padding: 20px;
+    animation: wiggle 0.3s infinite alternate;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+body {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Om449v6TuqHIYlTFju1_FwHaLH%26pid%3DApi&f=1&ipt=11b19bb95eb5cdac8ae39b7d906917ee03da3e2555c1ef8f374c5ba74fd24e77&ipo=images'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#pastaButton {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    outline: none;
+}

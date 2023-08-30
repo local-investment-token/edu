@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, World!</title>
+    </head>
+    <button onclick="connectWallet()">Connect Metamask Wallet</button>
+    <p id="ethAddress"></p>
+    <body>
+        <h1>Hello, World!</h1>
+        <script>
+            async function connectWallet(){
+                if (window.ethereum) {
+                    try {
+                        const accounts = await window.ethereum.request({ method:'eth_requestAccounts'});
+                        document.getElementById("ethAddress").innerText = "Connected:" + accounts[0];
+                    } catch (error) {
+                        console.error("user denied account connection");
+
+                    }
+                } else {
+                    alert("Please install Metamask!");
+                }
+            }
+        </script>
+        </body>
+        </html>
+        
